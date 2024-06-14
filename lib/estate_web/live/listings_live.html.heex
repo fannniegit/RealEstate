@@ -1,0 +1,265 @@
+<style>
+.listing-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 10px;
+}
+
+.listing-table th, .listing-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.listing-table th {
+  background-color: #f2f2f2;
+}
+
+.listing-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.listing-table tr:hover {
+  background-color: #ddd;
+}
+
+.listing-table th .sort-link {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.listing-table th .sort-link:hover {
+  color: #007bff;
+}
+
+.pagination {
+  text-align: center;
+}
+
+.pagination .link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  margin: 0 5px;
+}
+
+.pagination .link:hover {
+  background-color: #0056b3;
+}
+
+
+
+
+</style>
+
+<h1>Real Estate Listings</h1>
+<div id="listings">
+  <form phx-change="select-per-page">
+    <select name="per-page">
+      <%= Phoenix.HTML.Form.options_for_select(
+        [5, 10, 15, 20],
+        @options.per_page
+      ) %>
+    </select>
+    <label for="per-page">per page</label>
+  </form>
+  <div class="wrapper">
+    <table class="listing-table">
+      <thead>
+        <tr>
+          <th class="property-type">
+            <.sort_link sort_by={:property_type} options={@options}>
+              Property Type
+            </.sort_link>
+          </th>
+          <th>
+            <.sort_link sort_by={:price} options={@options}>
+              Price
+            </.sort_link>
+          </th>
+          <th>
+            <.sort_link sort_by={:bedrooms} options={@options}>
+              Bedrooms
+            </.sort_link>
+          </th>
+          <th>
+            <.sort_link sort_by={:bathrooms} options={@options}>
+              Bathrooms
+            </.sort_link>
+          </th>
+          <th>
+            <.sort_link sort_by={:square_feet} options={@options}>
+              Square Feet
+            </.sort_link>
+          </th>
+        </tr>
+      </thead>
+    <tbody>
+  <tr>
+    <td class="property-type">Single Family</td>
+    <td class="price">$300,000</td>
+    <td class="bedrooms">3</td>
+    <td class="bathrooms">2.5</td>
+    <td class="square-feet">2,000 sq. ft.</td>
+  </tr>
+  
+  <tr>
+    <td class="property-type">Condo</td>
+    <td class="price">$200,000</td>
+    <td class="bedrooms">2</td>
+    <td class="bathrooms">2</td>
+    <td class="square-feet">1,200 sq. ft.</td>
+  </tr>
+  <tr>
+    <td class="property-type">Apartment</td>
+    <td class="price">$1,500/mo</td>
+    <td class="bedrooms">1</td>
+    <td class="bathrooms">1</td>
+    <td class="square-feet">800 sq. ft.</td>
+  </tr>
+  <tr>
+    <td class="property-type">Townhouse</td>
+    <td class="price">$250,000</td>
+    <td class="bedrooms">2</td>
+    <td class="bathrooms">2.5</td>
+    <td class="square-feet">1,500 sq. ft.</td>
+  </tr>
+  <tr>
+    <td class="property-type">Luxury Villa</td>
+    <td class="price">$1,000,000</td>
+    <td class="bedrooms">4</td>
+    <td class="bathrooms">4</td>
+    <td class="square-feet">4,500 sq. ft.</td>
+  </tr>
+  <tr>
+    <td class="property-type">Ranch</td>
+    <td class="price">$350,000</td>
+    <td class="bedrooms">4</td>
+    <td class="bathrooms">2</td>
+    <td class="square-feet">2,300 sq. ft.</td>
+  </tr>
+  <tr>
+    <td class="property-type">Duplex</td>
+    <td class="price">$400,000</td>
+    <td class="bedrooms">6</td>
+    <td class="bathrooms">4</td>
+    <td class="square-feet">2,800 sq. ft.</td>
+  </tr>
+  <tr>
+    <td class="property-type">Loft</td>
+    <td class="price">$300,000</td>
+    <td class="bedrooms">1</td>
+    <td class="bathrooms">1</td>
+    <td class="square-feet">1,000 sq. ft.</td>
+  </tr>
+  <tr>
+    <td class="property-type">Mobile Home</td>
+    <td class="price">$75,000</td>
+    <td class="bedrooms">2</td>
+    <td class="bathrooms">1</td>
+    <td class="square-feet">900 sq. ft.</td>
+  </tr>
+  <tr>
+    <td class="property-type">Cottage</td>
+    <td class="price">$250,000</td>
+    <td class="bedrooms">2</td>
+    <td class="bathrooms">1</td>
+    <td class="square-feet">1,100 sq. ft.</td>
+  </tr>
+  <tr>
+    <td class="property-type">Bungalow</td>
+    <td class="price">$220,000</td>
+    <td class="bedrooms">3</td>
+    <td class="bathrooms">1.5</td>
+    <td class="square-feet">1,400 sq. ft.</td>
+  </tr>
+  <tr>
+    <td class="property-type">Mansion</td>
+    <td class="price">$5,000,000</td>
+    <td class="bedrooms">6</td>
+    <td class="bathrooms">8</td>
+    <td class="square-feet">10,000 sq. ft.</td>
+  </tr>
+  <tr>
+    <td class="property-type">Studio</td>
+    <td class="price">$150,000</td>
+    <td class="bedrooms">0</td>
+    <td class="bathrooms">1</td>
+    <td class="square-feet">600 sq. ft.</td>
+  </tr>
+  <tr>
+    <td class="property-type">Beachfront</td>
+    <td class="price">$1,200,000</td>
+    <td class="bedrooms">5</td>
+    <td class="bathrooms">4</td>
+    <td class="square-feet">3,500 sq. ft.</td>
+  </tr>
+  <tr>
+    <td class="property-type">Acreage</td>
+    <td class="price">$500,000</td>
+    <td class="bedrooms">0</td>
+    <td class="bathrooms">0</td>
+    <td class="square-feet">10 acres</td>
+  </tr>
+  <tr>
+    <td class="property-type">Lake House</td>
+    <td class="price">$600,000</td>
+    <td class="bedrooms">3</td>
+    <td class="bathrooms">2</td>
+    <td class="square-feet">2,200 sq. ft.</td>
+  </tr>
+  <tr>
+    <td class="property-type">Colonial</td>
+    <td class="price">$400,000</td>
+    <td class="bedrooms">4</td>
+    <td class="bathrooms">2.5</td>
+    <td class="square-feet">2,600 sq. ft.</td>
+  </tr>
+  <tr>
+    <td class="property-type">Townhome</td>
+    <td class="price">$280,000</td>
+    <td class="bedrooms">2</td>
+    <td class="bathrooms">2</td>
+    <td class="square-feet">1,600 sq. ft.</td>
+  </tr>
+  <tr>
+    <td class="property-type">Farmhouse</td>
+    <td class="price">$450,000</td>
+    <td class="bedrooms">5</td>
+    <td class="bathrooms">3</td>
+    <td class="square-feet">3,000 sq. ft.</td>
+  </tr>
+  <tr>
+    <td class="property-type">Penthouse</td>
+    <td class="price">$1,500,000</td>
+    <td class="bedrooms">3</td>
+    <td class="bathrooms">3.5</td>
+    <td class="square-feet">2,800 sq. ft.</td>
+  </tr>
+</tbody>
+
+    </table>
+    <div class="footer">
+      <div class="pagination">
+        <.link
+          :if={@options.page > 1}
+          patch={
+            ~p"/listings?#{%{@options | page: @options.page - 1}}"
+          }
+        >
+          Previous
+        </.link>
+        <.link patch={
+          ~p"/listings?#{%{@options | page: @options.page + 1}}"
+        }>
+          Next
+        </.link>
+      </div>
+    </div>
+  </div>
+</div>
+

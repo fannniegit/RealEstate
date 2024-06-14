@@ -1,0 +1,30 @@
+<header class="px-4 sm:px-6 lg:px-8">
+
+  <div class="flex items-center justify-between border-b border-zinc-100 py-3 text-sm">
+    <div class="flex items-center gap-4"> 
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0,0,256,256" width="32px" height="32px"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(8,8)"><rect x="12" y="16" width="8" height="8" fill="##ecff00"></rect><path d="M30,32h-28v-12h4v8h20v-8h4z" fill="#080842"></path><path d="M16,6.073l10.223,11.927h5.299l-15.522,-18.073l-15.52,18.073h5.297z" fill="#edda00"></path></g></g></svg>      <p class="bg-brand/5 text-brand rounded-full px-2 font-medium leading-6">
+              <a
+        href="http://localhost:4000">
+
+        Esse Real Estate</a>
+      </p>
+    </div>
+    <div class="flex items-center gap-4 font-semibold leading-6 text-zinc-900">
+      <a href="contacts" class="hover:text-zinc-700">
+        @esserealestate
+      </a>
+      <a
+        href="http://localhost:4000"
+        class="rounded-lg bg-zinc-100 px-2 py-1 hover:bg-zinc-200/80"
+      >
+        Main Page <span aria-hidden="true">&rarr;</span>
+      </a>
+    </div>
+  </div>
+</header>
+<main class="px-4 py-20 sm:px-6 lg:px-8">
+  <div class="mx-auto max-w-2xl">
+    <.flash_group flash={@flash} />
+    <%= @inner_content %>
+  </div>
+</main>

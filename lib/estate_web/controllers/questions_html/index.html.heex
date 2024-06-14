@@ -1,0 +1,100 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Bungee+Inline&family=Faster+One&family=Gasoek+One&family=Henny+Penny&family=Modak&family=Monofett&family=Monoton&family=Nosifer&family=Orbitron&family=Piedra&family=Rubik+Microbe&family=Rubik+Vinyl&family=Sedgwick+Ave+Display&family=Suez+One&display=swap');
+
+
+  body {
+    margin: 0; /* Remove default body margin */
+    padding: 0; /* Remove default body padding */
+    width: 100%;
+    height: 100vh;
+    background: rgb(248, 252, 201);
+    background: radial-gradient(circle, rgba(248, 252, 201, 1) 0%, rgba(245, 152, 133, 1) 100%);
+  }
+
+  p {}
+
+  /* Change cursor to pointer when hovering over summaries */
+  details summary {
+    cursor: pointer;
+  }
+</style>
+
+
+<body>
+<div>
+  <section class="text-gray-700">
+    <div class="container px-5 py-8 mx-auto">
+      <div class="text-center mb-20">
+<h1 class="sm:text-3xl text-2xl font-medium text-center title-font text-gray-900 mb-4"
+   style="font-family: 'Black Ops One';">
+  FAQs
+</h1>
+        <p class="text-base leading-relaxed xl:w-3/4 lg:w-3/4 mx-auto"> 
+          <%= gettext "Discover the answers to our top real estate FAQs and let us assist you in achieving your dream home, whether you're renting or buying." %>
+        </p>
+      </div>
+      <div class="flex flex-wrap sm:mx-auto sm:mb-2 -mx-2">
+        <div class="w-full px-4 py-2"> <!-- Removed lg:w-1/2 class -->
+          <details class="mb-4">
+            <summary class="font-semibold  bg-gray-200 rounded-md py-2 px-4">
+               <%= gettext "What are the steps in the home buying process? " %>
+            </summary>
+            <span>
+               <%= gettext "The home buying process typically involves finding a suitable property, securing financing through a mortgage lender, making an offer on the home, getting a home inspection to assess its condition, and then closing the deal. It's important to work with a real estate agent to guide you through each step." %>
+            </span>
+          </details>
+          <details class="mb-4">
+            <summary class="font-semibold bg-gray-200 rounded-md py-2 px-4">
+              <%= gettext " What documents do I need to rent a house?" %>
+            </summary>
+            <span>
+              <%= gettext " Typically, you'll need proof of income, identification, and references. Landlords may also request a rental application and credit check. " %>
+            </span>
+          </details>
+          <details class="mb-4">
+            <summary class="font-semibold  bg-gray-200 rounded-md py-2 px-4">
+              <%= gettext " What are closing costs, and who pays for them?" %>
+            </summary>
+            <span>
+              <%= gettext " Closing costs are fees associated with the home buying process. Both the buyer and seller may share these costs, but they are typically negotiated during the sale. " %>
+            </span>
+          </details>
+          <details class="mb-4">
+            <summary class="font-semibold  bg-gray-200 rounded-md py-2 px-4">
+              <%= gettext " What's the current local real estate market like?" %>
+            </summary>
+            <span class="px-4 py-2">
+              <%= gettext " The state of the local real estate market can change over time. It's advisable to consult with a local real estate agent who can provide up-to-date information on market trends, including home prices, inventory levels, and whether it's a buyer's or seller's market." %>
+            </span>
+          </details>
+          <details class="mb-4">
+            <summary class="font-semibold  bg-gray-200 rounded-md py-2 px-4">
+             <%= gettext "  What is a security deposit, and how does it work?" %>
+            </summary>
+            <span class="px-4 py-2">
+             <%= gettext "  A security deposit is a sum of money you pay upfront to cover any potential damages or unpaid rent. It's refundable if you meet the terms of your lease." %>
+            </span>
+          </details>
+          <details class="mb-4">
+            <summary class="font-semibold  bg-gray-200 rounded-md py-2 px-4">
+             <%= gettext "  What should an agreement include?" %>
+            </summary>
+            <span class="px-4 py-2">
+              <%= gettext " A purchase agreement, also known as a contract of sale, should include details about the property (address, description, and condition), the purchase price, earnest money deposit, contingencies (such as financing and inspections), closing date, and any other terms agreed upon by the buyer and seller. It's important to have a real estate attorney or agent review the contract to ensure it's legally sound and protects your interests." %>
+            </span>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+</body>
+
+
+
+
+
+
+
+

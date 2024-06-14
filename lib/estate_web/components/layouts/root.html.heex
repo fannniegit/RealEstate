@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" class="[scrollbar-gutter:stable]">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="csrf-token" content={get_csrf_token()} />
+    <.live_title suffix=" · Phoenix Framework">
+      <%= assigns[:page_title] || "Nature" %>
+    </.live_title>
+    <link phx-track-static rel="stylesheet" href={~p"/assets/app.css"} />
+    <script defer phx-track-static type="text/javascript" src={~p"/assets/app.js"}>
+    </script>
+    <style>
+      /* Add your custom styles here */
+      .cursor-pointer {
+        cursor: pointer;
+      }
+      .dropdown {
+        position: absolute;
+        left: 0;
+        top: 100%;
+        display: none;
+      }
+      .list-item:hover .dropdown {
+        display: block;
+      }
+    </style>
+  </head>
+  <body class="bg-white antialiased">
+    <ul class="relative z-10 flex items-center gap-4 px-4 sm:px-6 lg:px-8 justify-end">
+      <%= if @current_user do %>
+        <li class="text-[0.8125rem] leading-6 text-zinc-900">
+        
+        <img src="/images/users.svg" alt="Log Out" class="w-5 h-5 fill-current inline-block mr-2" />
+          <%= @current_user.email %>
+        </li>
+ 
+<li class="list-item relative">
+  <a href={~p"/users/settings"} class="text-[0.8125rem] leading-6 text-zinc-900 font-semibold hover:text-zinc-700">
+  <img src="/images/lan.png" alt="Smile" class="w-5 h-5 fill-current inline-block mr-2 cursor-pointer" id="dropdownToggle" />
+  </a>
+  <div id="languageDropdown" class="dropdown bg-white border border-gray-300 w-28 rounded-lg shadow-lg absolute hidden">
+    <a href="en" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">en</a>
+    <a href="bg" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">bg</a>
+  </div></li>
+        <li class="list-item relative">
+          <a href={~p"/users/settings"} class="text-[0.8125rem] leading-6 text-zinc-900 font-semibold hover:text-zinc-700">
+            <img src="/images/set.svg" alt="Settings" class="w-6 h-6 fill-current inline-block mr-2 cursor-pointer" />
+        
+          </a>
+
+
+          <div id="settingsDropdown" class="dropdown bg-white border border-gray-300 w-48 rounded-lg shadow-lg">
+            <a href={~p"/users/settings"} class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Settings</a>
+            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Information</a>
+            <a href="pphotos" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Profile Picture</a>
+            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">My Thoughts</a>
+          </div>
+        </li>
+        <li>
+          <p> <%= @locale %></p>
+        </li>
+        <li>
+          <.link
+            href={~p"/#{@locale}/users/log_out"}
+            method="delete"
+            class="text-[0.8125rem] leading-6 text-zinc-900 font-semibold hover:text-zinc-700"
+          >   
+           <img src="/images/out.svg" alt="Log Out" class="w-5 h-5 fill-current inline-block mr-2" />
+                   <%= gettext "Log Out" %>
+  </.link>
+        </li>
+      <% else %>
+        <li>
+          <.link
+            href={~p"/#{@locale}/users/register"}
+            class="text-[0.8125rem] leading-6 text-zinc-900 font-semibold hover:text-zinc-700"
+          >
+            Register
+          </.link>
+        </li>
+        <li>
+          <.link
+            href={~p"/#{@locale}/users/log_in"}
+            class="text-[0.8125rem] leading-6 text-zinc-900 font-semibold hover:text-zinc-700"
+          >
+            Log in
+          </.link>
+        </li>
+      <% end %>
+    </ul>
+    <%= @inner_content %>
+  </body>
+</html>
+

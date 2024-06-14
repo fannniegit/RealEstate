@@ -1,0 +1,282 @@
+## "msgid"s in this file come from POT (.pot) files.
+###
+### Do not add, change, or remove "msgid"s manually here as
+### they're tied to the ones in the corresponding POT file
+### (with the same domain).
+###
+### Use "mix gettext.extract --merge" or "mix gettext.merge"
+### to merge POT files into PO files.
+msgid ""
+msgstr ""
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: lib/estate_web/components/core_components.ex:474
+#, elixir-autogen, elixir-format
+msgid "Actions"
+msgstr ""
+
+#: lib/estate_web/controllers/page_html/home.html.heex:267
+#, elixir-autogen, elixir-format
+msgid "Welcome to the rental world!"
+msgstr ""
+
+#: lib/estate_web/components/core_components.ex:76
+#: lib/estate_web/components/core_components.ex:128
+#, elixir-autogen, elixir-format
+msgid "close"
+msgstr ""
+
+#: lib/estate_web/controllers/questions_html/index.html.heex:75
+#, elixir-autogen, elixir-format
+msgid "  A security deposit is a sum of money you pay upfront to cover any potential damages or unpaid rent. It's refundable if you meet the terms of your lease."
+msgstr ""
+
+#: lib/estate_web/controllers/questions_html/index.html.heex:72
+#, elixir-autogen, elixir-format
+msgid "  What is a security deposit, and how does it work?"
+msgstr ""
+
+#: lib/estate_web/controllers/questions_html/index.html.heex:80
+#, elixir-autogen, elixir-format
+msgid "  What should an agreement include?"
+msgstr ""
+
+#: lib/estate_web/controllers/questions_html/index.html.heex:83
+#, elixir-autogen, elixir-format
+msgid " A purchase agreement, also known as a contract of sale, should include details about the property (address, description, and condition), the purchase price, earnest money deposit, contingencies (such as financing and inspections), closing date, and any other terms agreed upon by the buyer and seller. It's important to have a real estate attorney or agent review the contract to ensure it's legally sound and protects your interests."
+msgstr ""
+
+#: lib/estate_web/controllers/questions_html/index.html.heex:59
+#, elixir-autogen, elixir-format
+msgid " Closing costs are fees associated with the home buying process. Both the buyer and seller may share these costs, but they are typically negotiated during the sale. "
+msgstr ""
+
+#: lib/estate_web/controllers/questions_html/index.html.heex:67
+#, elixir-autogen, elixir-format
+msgid " The state of the local real estate market can change over time. It's advisable to consult with a local real estate agent who can provide up-to-date information on market trends, including home prices, inventory levels, and whether it's a buyer's or seller's market."
+msgstr ""
+
+#: lib/estate_web/controllers/questions_html/index.html.heex:51
+#, elixir-autogen, elixir-format
+msgid " Typically, you'll need proof of income, identification, and references. Landlords may also request a rental application and credit check. "
+msgstr ""
+
+#: lib/estate_web/controllers/questions_html/index.html.heex:56
+#, elixir-autogen, elixir-format
+msgid " What are closing costs, and who pays for them?"
+msgstr ""
+
+#: lib/estate_web/controllers/questions_html/index.html.heex:48
+#, elixir-autogen, elixir-format
+msgid " What documents do I need to rent a house?"
+msgstr ""
+
+#: lib/estate_web/controllers/questions_html/index.html.heex:64
+#, elixir-autogen, elixir-format
+msgid " What's the current local real estate market like?"
+msgstr ""
+
+#: lib/estate_web/controllers/page_html/home.html.heex:311
+#, elixir-autogen, elixir-format
+msgid "Add your property type"
+msgstr ""
+
+#: lib/estate_web/controllers/rent_html/index.hetml.heex:112
+#, elixir-autogen, elixir-format
+msgid "Attached house"
+msgstr ""
+
+#: lib/estate_web/controllers/rent_html/index.hetml.heex:82
+#: lib/estate_web/controllers/rent_html/index.hetml.heex:127
+#: lib/estate_web/controllers/rent_html/index.hetml.heex:178
+#: lib/estate_web/controllers/rent_html/index.hetml.heex:223
+#, elixir-autogen, elixir-format
+msgid "Bathroomsnt"
+msgstr ""
+
+#: lib/estate_web/controllers/rent_html/index.hetml.heex:76
+#: lib/estate_web/controllers/rent_html/index.hetml.heex:121
+#: lib/estate_web/controllers/rent_html/index.hetml.heex:172
+#: lib/estate_web/controllers/rent_html/index.hetml.heex:217
+#, elixir-autogen, elixir-format
+msgid "Bedrooms"
+msgstr ""
+
+#: lib/estate_web/controllers/page_html/home.html.heex:285
+#, elixir-autogen, elixir-format
+msgid "Buy"
+msgstr ""
+
+#: lib/estate_web/controllers/page_html/home.html.heex:342
+#, elixir-autogen, elixir-format
+msgid "Calculate property costs!"
+msgstr ""
+
+#: lib/estate_web/controllers/page_html/home.html.heex:341
+#, elixir-autogen, elixir-format
+msgid "Calculation"
+msgstr ""
+
+#: lib/estate_web/controllers/page_html/home.html.heex:332
+#, elixir-autogen, elixir-format
+msgid "Check it out!"
+msgstr ""
+
+#: lib/estate_web/controllers/rent_html/index.hetml.heex:67
+#: lib/estate_web/controllers/rent_html/index.hetml.heex:163
+#: lib/estate_web/controllers/rent_html/index.hetml.heex:208
+#, elixir-autogen, elixir-format
+msgid "Detached house"
+msgstr ""
+
+#: lib/estate_web/controllers/page_html/home.html.heex:331
+#, elixir-autogen, elixir-format
+msgid "DevOps"
+msgstr ""
+
+#: lib/estate_web/controllers/page_html/home.html.heex:321
+#, elixir-autogen, elixir-format
+msgid "Different types of property"
+msgstr ""
+
+#: lib/estate_web/controllers/questions_html/index.html.heex:33
+#, elixir-autogen, elixir-format
+msgid "Discover the answers to our top real estate FAQs and let us assist you in achieving your dream home, whether you're renting or buying."
+msgstr ""
+
+#: lib/estate_web/controllers/rent_html/index.hetml.heex:69
+#, elixir-autogen, elixir-format
+msgid "Evergreen Terrace"
+msgstr ""
+
+#: lib/estate_web/controllers/page_html/home.html.heex:288
+#, elixir-autogen, elixir-format
+msgid "FAQs"
+msgstr ""
+
+#: lib/estate_web/controllers/page_html/home.html.heex:301
+#, elixir-autogen, elixir-format
+msgid "Find a City"
+msgstr ""
+
+#: lib/estate_web/controllers/page_html/home.html.heex:322
+#, elixir-autogen, elixir-format
+msgid "Find the perfect property for you. Check all available!"
+msgstr ""
+
+#: lib/estate_web/controllers/page_html/home.html.heex:352
+#, elixir-autogen, elixir-format
+msgid "Gallary"
+msgstr ""
+
+#: lib/estate_web/controllers/page_html/home.html.heex:302
+#, elixir-autogen, elixir-format
+msgid "Here you can find the area that matches your requirements the best!"
+msgstr ""
+
+#: lib/estate_web/controllers/page_html/home.html.heex:312
+#, elixir-autogen, elixir-format
+msgid "Here you have the freedom to add property types! Be creative!"
+msgstr ""
+
+#: lib/estate_web/controllers/page_html/home.html.heex:363
+#, elixir-autogen, elixir-format
+msgid "Info"
+msgstr ""
+
+#: lib/estate_web/controllers/page_html/home.html.heex:364
+#: lib/estate_web/controllers/page_html/home.html.heex:374
+#: lib/estate_web/controllers/page_html/home.html.heex:384
+#, elixir-autogen, elixir-format
+msgid "Information"
+msgstr ""
+
+#: lib/estate_web/controllers/rent_html/index.hetml.heex:187
+#, elixir-autogen, elixir-format
+msgid "Jessica Williams"
+msgstr ""
+
+#: lib/estate_web/controllers/rent_html/index.hetml.heex:136
+#, elixir-autogen, elixir-format
+msgid "John Smith"
+msgstr ""
+
+#: lib/estate_web/components/layouts/root.html.heex:62
+#, elixir-autogen, elixir-format
+msgid "Log Out"
+msgstr ""
+
+#: lib/estate_web/controllers/rent_html/index.hetml.heex:232
+#, elixir-autogen, elixir-format
+msgid "Michael Jordan"
+msgstr ""
+
+#: lib/estate_web/controllers/rent_html/index.hetml.heex:68
+#: lib/estate_web/controllers/rent_html/index.hetml.heex:113
+#: lib/estate_web/controllers/rent_html/index.hetml.heex:164
+#: lib/estate_web/controllers/rent_html/index.hetml.heex:209
+#, elixir-autogen, elixir-format
+msgid "Monthly"
+msgstr ""
+
+#: lib/estate_web/controllers/rent_html/index.hetml.heex:165
+#, elixir-autogen, elixir-format
+msgid "North Milwaukee Avenue"
+msgstr ""
+
+#: lib/estate_web/controllers/rent_html/index.hetml.heex:86
+#: lib/estate_web/controllers/rent_html/index.hetml.heex:131
+#: lib/estate_web/controllers/rent_html/index.hetml.heex:182
+#: lib/estate_web/controllers/rent_html/index.hetml.heex:227
+#, elixir-autogen, elixir-format
+msgid "Realtor"
+msgstr ""
+
+#: lib/estate_web/controllers/page_html/home.html.heex:279
+#, elixir-autogen, elixir-format
+msgid "Rent"
+msgstr ""
+
+#: lib/estate_web/controllers/page_html/home.html.heex:353
+#, elixir-autogen, elixir-format
+msgid "See&Add your favourite proreties"
+msgstr ""
+
+#: lib/estate_web/controllers/page_html/home.html.heex:373
+#, elixir-autogen, elixir-format
+msgid "Space"
+msgstr ""
+
+#: lib/estate_web/controllers/questions_html/index.html.heex:43
+#, elixir-autogen, elixir-format
+msgid "The home buying process typically involves finding a suitable property, securing financing through a mortgage lender, making an offer on the home, getting a home inspection to assess its condition, and then closing the deal. It's important to work with a real estate agent to guide you through each step."
+msgstr ""
+
+#: lib/estate_web/controllers/page_html/home.html.heex:383
+#, elixir-autogen, elixir-format
+msgid "Thoughts"
+msgstr ""
+
+#: lib/estate_web/controllers/rent_html/index.hetml.heex:91
+#, elixir-autogen, elixir-format
+msgid "Tiffany Heffner"
+msgstr ""
+
+#: lib/estate_web/controllers/rent_html/index.hetml.heex:210
+#, elixir-autogen, elixir-format
+msgid "West Randolph Street"
+msgstr ""
+
+#: lib/estate_web/controllers/questions_html/index.html.heex:40
+#, elixir-autogen, elixir-format
+msgid "What are the steps in the home buying process? "
+msgstr ""
+
+#: lib/estate_web/controllers/rent_html/index.hetml.heex:67
+#: lib/estate_web/controllers/rent_html/index.hetml.heex:112
+#: lib/estate_web/controllers/rent_html/index.hetml.heex:163
+#: lib/estate_web/controllers/rent_html/index.hetml.heex:208
+#, elixir-autogen, elixir-format
+msgid "y old"
+msgstr ""

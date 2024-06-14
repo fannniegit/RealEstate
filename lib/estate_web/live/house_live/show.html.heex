@@ -1,0 +1,30 @@
+<.header>
+  House <%= @house.id %>
+  <:subtitle>This is a house record from your database.</:subtitle>
+  <:actions>
+    <.link patch={~p"/houses/#{@house}/show/edit"} phx-click={JS.push_focus()}>
+      <.button>Edit house</.button>
+    </.link>
+  </:actions>
+</.header>
+
+<.list>
+  <:item title="Type"><%= @house.type %></:item>
+  <:item title="Rooms"><%= @house.rooms %></:item>
+  <:item title="Bathrooms"><%= @house.bathrooms %></:item>
+  <:item title="Yo"><%= @house.yo %></:item>
+  <:item title="Location"><%= @house.location %></:item>
+</.list>
+
+<.back navigate={~p"/houses"}>Back to houses</.back>
+
+<.modal :if={@live_action == :edit} id="house-modal" show on_cancel={JS.patch(~p"/houses/#{@house}")}>
+  <.live_component
+    module={EstateWeb.HouseLive.FormComponent}
+    id={@house.id}
+    title={@page_title}
+    action={@live_action}
+    house={@house}
+    patch={~p"/houses/#{@house}"}
+  />
+</.modal>

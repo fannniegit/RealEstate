@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sortable Table with Filtering and Pagination</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        h2 {
+            background-color: #2a2438;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            margin: 0;
+            font-family: 'Oswald', sans-serif;
+        }
+
+        label {
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        select,
+        input {
+            width: 170px;     
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+            cursor: pointer;
+        }
+
+        th {
+            background-color: #2a2438;
+            color: white;
+        }
+
+        th:hover {
+            background-color: #5c5470;
+        }
+
+        tr:nth-child(even) {
+            <%!-- background-color: #edb1f1; --%>
+        }
+
+        tr:hover {
+            background-color: #dbd8e3;
+        }
+
+        .pagination {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .pagination li {
+            margin-right: 10px;
+            cursor: pointer;
+            background-color: #ddd;
+            padding: 8px;
+            border-radius: 4px;
+        }
+
+        .pagination li:hover {
+            background-color: #bbb;
+        }
+
+        #infoContainer {
+            margin-top: 20px;
+        }
+
+        #dataTable th.selected {
+            background-color: #5c5470;
+        }
+
+td.selected,
+th.selected {
+    background-color: #dbd8e3;
+}
+
+    </style>
+</head>
+
+<body>
+
+    <h2>Sortable Table with Filtering and Pagination</h2>
+    <br>
+    <label for="filter">Filter by:</label>
+    <select id="filter" onchange="filterTable()">
+        <option value="all">All</option>
+        <option value="name">Name</option>
+        <option value="location">Location</option>
+        <option value="price">Price</option>
+        <option value="bedrooms">Bedrooms</option>
+        <option value="bathrooms">Bathrooms</option>
+    </select>
+
+    <input type="text" id="searchInput" onkeyup="searchTable()" placeholder="Search for names..">
+
+    <table id="dataTable">
+        <thead>
+            <tr>
+                <th onclick="sortTable('name')">Name</th>
+                <th onclick="sortTable('location')">Location</th>
+                <th onclick="sortTable('price')">Price</th>
+                <th onclick="sortTable('bedrooms')">Bedrooms</th>
+                <th onclick="sortTable('bathrooms')">Bathrooms</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Table data will be dynamically populated here -->
+        </tbody>
+    </table>
+
+    <div class="pagination" id="pagination"></div>
+
+    <div id="infoContainer"></div>
+
+    <script>
+        var sortOrder = 'asc';
+        var properties = [
+            { name: "Luxury Villa", location: "City Center", price: 1000000, bedrooms: 5, bathrooms: 4 },
+            { name: "Cozy Apartment", location: "Suburb", price: 200000, bedrooms: 2, bathrooms: 1 },
+            { name: "Modern Condo", location: "Downtown", price: 500000, bedrooms: 3, bathrooms: 2 },
+            { name: "Spacious Mansion", location: "Countryside", price: 1500000, bedrooms: 6, bathrooms: 5 },
+            { name: "Charming Cottage", location: "Village", price: 300000, bedrooms: 4, bathrooms: 3 },
+            { name: "Elegant Townhouse", location: "Historic District", price: 700000, bedrooms: 3, bathrooms: 2 },
+            { name: "Lakefront Retreat", location: "Lakeside", price: 900000, bedrooms: 4, bathrooms: 3 },
+            { name: "Ski Chalet", location: "Mountain Resort", price: 800000, bedrooms: 3, bathrooms: 2 },
+            { name: "Beachfront Villa", location: "Seaside", price: 1200000, bedrooms: 5, bathrooms: 4 },
+            { name: "Urban Penthouse", location: "City Skyline", price: 850000, bedrooms: 2, bathrooms: 2 },
+            { name: "Rustic Farmhouse", location: "Rural Area", price: 600000, bedrooms: 4, bathrooms: 3 },
+            { name: "Garden Retreat", location: "Botanical District", price: 450000, bedrooms: 2, bathrooms: 1 },
+            { name: "Sustainable Eco-Home", location: "Green Community", price: 550000, bedrooms: 3, bathrooms: 2 },
+            { name: "Luxury Penthouse", location: "High-Rise Tower", price: 1800000, bedrooms: 4, bathrooms: 3 },
+            { name: "Historical Mansion", location: "Heritage District", price: 2500000, bedrooms: 8, bathrooms: 6 },
+            { name: "Beach House Paradise", location: "Tropical Coast", price: 2200000, bedrooms: 6, bathrooms: 5 },
+            { name: "Art Deco Loft", location: "Artistic Quarter", price: 950000, bedrooms: 3, bathrooms: 2 },
+            { name: "Smart Home Oasis", location: "Tech Hub", price: 1200000, bedrooms: 4, bathrooms: 3 },
+            { name: "Serenity Cabin", location: "Forest Retreat", price: 350000, bedrooms: 2, bathrooms: 1 },
+            { name: "Skyline View Condo", location: "Metropolitan Area", price: 1100000, bedrooms: 3, bathrooms: 2 },
+            { name: "Riverside Villa", location: "Scenic Riverbank", price: 1600000, bedrooms: 5, bathrooms: 4 },
+            { name: "Contemporary Duplex", location: "Artsy Neighborhood", price: 800000, bedrooms: 2, bathrooms: 2 },
+            { name: "Mountain Lodge", location: "Alpine Retreat", price: 700000, bedrooms: 4, bathrooms: 3 },
+        ];
+
+        properties = properties.concat([
+            { name: "Modern Condo", location: "Downtown", price: 500000, bedrooms: 3, bathrooms: 2 },
+            // ... (copy and paste the rest of the properties here)
+        ]);
+
+        var currentPage = 1;
+        var itemsPerPage = 10;
+
+        function renderTable(data) {
+            var tableBody = document.getElementById('dataTable').getElementsByTagName('tbody')[0];
+            tableBody.innerHTML = '';
+
+            var start = (currentPage - 1) * itemsPerPage;
+            var end = start + itemsPerPage;
+
+            data.slice(start, end).forEach(function (item) {
+                var row = tableBody.insertRow(-1);
+                var cell1 = row.insertCell(0);
+                var cell2 = row.insertCell(1);
+                var cell3 = row.insertCell(2);
+                var cell4 = row.insertCell(3);
+                var cell5 = row.insertCell(4);
+
+                cell1.innerHTML = `<span onclick="showDetails('${JSON.stringify(item)}')">${item.name}</span>`;
+                cell2.innerHTML = item.location;
+                cell3.innerHTML = item.price;
+                cell4.innerHTML = item.bedrooms;
+                cell5.innerHTML = item.bathrooms;
+            });
+        }
+
+        function sortTable(column) {
+            var table, rows, switching, i, x, y, shouldSwitch;
+            table = document.getElementById("dataTable");
+            switching = true;
+
+            while (switching) {
+                switching = false;
+                rows = table.rows;
+
+                for (i = 1; i < rows.length - 1; i++) {
+                    shouldSwitch = false;
+                    x = rows[i].getElementsByTagName("td")[0];
+                    y = rows[i + 1].getElementsByTagName("td")[0];
+
+                    var xText = x.textContent || x.innerText;
+                    var yText = y.textContent || y.innerText;
+
+                    if ((sortOrder === 'asc' && xText.toLowerCase() > yText.toLowerCase()) ||
+                        (sortOrder === 'desc' && xText.toLowerCase() < yText.toLowerCase())) {
+                        shouldSwitch = true;
+                        break;
+                    }
+                }
+
+                if (shouldSwitch) {
+                    rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+                    switching = true;
+                }
+            }
+
+            sortOrder = (sortOrder === 'asc') ? 'desc' : 'asc';
+        }
+
+        function filterTable() {
+            var filter = document.getElementById('filter').value;
+
+            if (filter === 'all') {
+                renderTable(properties);
+            } else {
+                var filteredData = properties.filter(function (item) {
+                    return item[filter];
+                });
+                renderTable(filteredData);
+            }
+
+            highlightTableHeader(filter);
+        }
+
+  function highlightTableHeader(selectedProperty) {
+    var tableHeaders = document.querySelectorAll('#dataTable th');
+    var columnIndex = Array.from(tableHeaders).findIndex(header => header.innerText.toLowerCase() === selectedProperty);
+
+    // Remove the 'selected' class from all headers and cells
+    tableHeaders.forEach(header => header.classList.remove('selected'));
+    var tableRows = document.querySelectorAll('#dataTable tbody tr');
+    tableRows.forEach(row => row.cells[columnIndex].classList.remove('selected'));
+
+    // Add the 'selected' class to the selected header and all cells in the column
+    tableHeaders[columnIndex].classList.add('selected');
+    tableRows.forEach(row => row.cells[columnIndex].classList.add('selected'));
+}
+
+
+        function searchTable() {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("searchInput");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("dataTable");
+            tr = table.getElementsByTagName("tr");
+
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[0];
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+
+        function showDetails(details) {
+            var infoContainer = document.getElementById('infoContainer');
+            infoContainer.innerHTML = `<p>${details}</p>`;
+        }
+
+        function setupPagination() {
+            var totalPages = Math.ceil(properties.length / itemsPerPage);
+            var paginationContainer = document.getElementById('pagination');
+            paginationContainer.innerHTML = '';
+
+            for (var i = 1; i <= totalPages; i++) {
+                var li = document.createElement('li');
+                li.textContent = i;
+                li.onclick = function () {
+                    currentPage = parseInt(this.textContent);
+                    renderTable(properties);
+                };
+                paginationContainer.appendChild(li);
+            }
+        }
+
+        renderTable(properties);
+        setupPagination();
+    </script>
+
+</body>
+
+</html>

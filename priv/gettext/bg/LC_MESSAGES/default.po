@@ -1,0 +1,312 @@
+## "msgid"s in this file come from POT (.pot) files.
+###
+### Do not add, change, or remove "msgid"s manually here as
+### they're tied to the ones in the corresponding POT file
+### (with the same domain).
+###
+### Use "mix gettext.extract --merge" or "mix gettext.merge"
+### to merge POT files into PO files.
+msgid ""
+msgstr ""
+"Language: bg\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: lib/estate_web/components/core_components.ex:474
+#, elixir-autogen, elixir-format
+msgid "Actions"
+msgstr ""
+
+#: lib/estate_web/controllers/page_html/home.html.heex:267
+#, elixir-autogen, elixir-format
+msgid "Welcome to the rental world!"
+msgstr "Добре дошли в света на наемите"
+
+#: lib/estate_web/components/core_components.ex:76
+#: lib/estate_web/components/core_components.ex:128
+#, elixir-autogen, elixir-format
+msgid "close"
+msgstr "Затвори"
+
+#: lib/estate_web/controllers/questions_html/index.html.heex:75
+#, elixir-autogen, elixir-format
+msgid "  A security deposit is a sum of money you pay upfront to cover any potential damages or unpaid rent. It's refundable if you meet the terms of your lease."
+msgstr "Гаранционният депозит е сума пари, която плащате предварително, за да покриете всички потенциални щети или неплатен наем. Тя се възстановява, ако отговаряте на условията на договора за наем."
+
+#: lib/estate_web/controllers/questions_html/index.html.heex:72
+#, elixir-autogen, elixir-format
+msgid "  What is a security deposit, and how does it work?"
+msgstr "Какво е депозит за сигурност и как работи?"
+
+#: lib/estate_web/controllers/questions_html/index.html.heex:80
+#, elixir-autogen, elixir-format
+msgid "  What should an agreement include?"
+msgstr "Какво трябва да включва едно споразумение?"
+
+#: lib/estate_web/controllers/questions_html/index.html.heex:83
+#, elixir-autogen, elixir-format
+msgid " A purchase agreement, also known as a contract of sale, should include details about the property (address, description, and condition), the purchase price, earnest money deposit, contingencies (such as financing and inspections), closing date, and any other terms agreed upon by the buyer and seller. It's important to have a real estate attorney or agent review the contract to ensure it's legally sound and protects your interests."
+msgstr "Договорът за покупка, известен също като договор за продажба, трябва да включва подробности за имота (адрес, описание и състояние), покупната цена, задатък, непредвидени разходи (като финансиране и инспекции), крайна дата и всякакви други условия, договорени от купувача и продавача. Важно е да има адвокат по недвижими имоти или агент преглед на договора, за да се гарантира, че е законно и защитава вашите интереси."
+
+#: lib/estate_web/controllers/questions_html/index.html.heex:59
+#, elixir-autogen, elixir-format
+msgid " Closing costs are fees associated with the home buying process. Both the buyer and seller may share these costs, but they are typically negotiated during the sale. "
+msgstr "Заключителните разходи са такси, свързани с процеса на закупуване на жилище. Както купувачът, така и продавачът могат да споделят тези разходи, но те обикновено се договарят по време на продажбата."
+
+#: lib/estate_web/controllers/questions_html/index.html.heex:67
+#, elixir-autogen, elixir-format
+msgid " The state of the local real estate market can change over time. It's advisable to consult with a local real estate agent who can provide up-to-date information on market trends, including home prices, inventory levels, and whether it's a buyer's or seller's market."
+msgstr "Състоянието на местния пазар на недвижими имоти може да се промени с течение на времето. Препоръчително е да се консултирате с местен агент по недвижими имоти, който може да предостави актуална информация за пазарните тенденции, включително цените на жилищата, нивата на запасите и дали това е пазар на купувача или продавача."
+
+#: lib/estate_web/controllers/questions_html/index.html.heex:51
+#, elixir-autogen, elixir-format
+msgid " Typically, you'll need proof of income, identification, and references. Landlords may also request a rental application and credit check. "
+msgstr "Обикновено ще ви трябва доказателство за доход, идентификация и референции. Наемодателите могат също да поискат заявление за наем и кредитна проверка."
+
+#: lib/estate_web/controllers/questions_html/index.html.heex:56
+#, elixir-autogen, elixir-format
+msgid " What are closing costs, and who pays for them?"
+msgstr "Какви са разходите след покупка и кой ги плаща? "
+
+#: lib/estate_web/controllers/questions_html/index.html.heex:48
+#, elixir-autogen, elixir-format
+msgid " What documents do I need to rent a house?"
+msgstr "Какви документи са необходими за наемане на имот?"
+
+#: lib/estate_web/controllers/questions_html/index.html.heex:64
+#, elixir-autogen, elixir-format
+msgid " What's the current local real estate market like?"
+msgstr "Какъв е настоящият местен пазар на недвижими имоти?"
+
+#: lib/estate_web/controllers/page_html/home.html.heex:311
+#, elixir-autogen, elixir-format
+msgid "Add your property type"
+msgstr "Добави имот"
+
+#: lib/estate_web/controllers/rent_html/index.hetml.heex:112
+#, elixir-autogen, elixir-format
+msgid "Attached house"
+msgstr "Долепена къща "
+
+#: lib/estate_web/controllers/rent_html/index.hetml.heex:82
+#: lib/estate_web/controllers/rent_html/index.hetml.heex:127
+#: lib/estate_web/controllers/rent_html/index.hetml.heex:178
+#: lib/estate_web/controllers/rent_html/index.hetml.heex:223
+#, elixir-autogen, elixir-format
+msgid "Bathroomsnt"
+msgstr "Бани"
+
+#: lib/estate_web/controllers/rent_html/index.hetml.heex:76
+#: lib/estate_web/controllers/rent_html/index.hetml.heex:121
+#: lib/estate_web/controllers/rent_html/index.hetml.heex:172
+#: lib/estate_web/controllers/rent_html/index.hetml.heex:217
+#, elixir-autogen, elixir-format
+msgid "Bedrooms"
+msgstr "Спални"
+
+#: lib/estate_web/controllers/page_html/home.html.heex:285
+#, elixir-autogen, elixir-format
+msgid "Buy"
+msgstr "Купи"
+
+#: lib/estate_web/controllers/page_html/home.html.heex:342
+#, elixir-autogen, elixir-format
+msgid "Calculate property costs!"
+msgstr "Изчисли имотните стойности"
+
+#: lib/estate_web/controllers/page_html/home.html.heex:341
+#, elixir-autogen, elixir-format
+msgid "Calculation"
+msgstr "Калкулации"
+
+#: lib/estate_web/controllers/page_html/home.html.heex:332
+#, elixir-autogen, elixir-format
+msgid "Check it out!"
+msgstr "Провери!"
+
+#: lib/estate_web/controllers/rent_html/index.hetml.heex:67
+#: lib/estate_web/controllers/rent_html/index.hetml.heex:163
+#: lib/estate_web/controllers/rent_html/index.hetml.heex:208
+#, elixir-autogen, elixir-format
+msgid "Detached house"
+msgstr "Отделена къща"
+
+#: lib/estate_web/controllers/page_html/home.html.heex:331
+#, elixir-autogen, elixir-format
+msgid "DevOps"
+msgstr "Девс"
+
+#: lib/estate_web/controllers/page_html/home.html.heex:321
+#, elixir-autogen, elixir-format
+msgid "Different types of property"
+msgstr "Различни типове имат"
+
+#: lib/estate_web/controllers/questions_html/index.html.heex:33
+#, elixir-autogen, elixir-format
+msgid "Discover the answers to our top real estate FAQs and let us assist you in achieving your dream home, whether you're renting or buying."
+msgstr "Намери отговорите на нашите топ често задашани шъпроси и ни позволида ти помогнем в намирането на твоя мечтан дом."
+
+#: lib/estate_web/controllers/rent_html/index.hetml.heex:69
+#, elixir-autogen, elixir-format
+msgid "Evergreen Terrace"
+msgstr "Евъргрийн Террас"
+
+#: lib/estate_web/controllers/page_html/home.html.heex:288
+#, elixir-autogen, elixir-format
+msgid "FAQs"
+msgstr "Въпроси"
+
+#: lib/estate_web/controllers/page_html/home.html.heex:301
+#, elixir-autogen, elixir-format
+msgid "Find a City"
+msgstr "Намери град"
+
+#: lib/estate_web/controllers/page_html/home.html.heex:322
+#, elixir-autogen, elixir-format
+msgid "Find the perfect property for you. Check all available!"
+msgstr "Тук можете да намерите най-добрите имоти за наемане!"
+
+#: lib/estate_web/controllers/page_html/home.html.heex:352
+#, elixir-autogen, elixir-format
+msgid "Gallary"
+msgstr "Галерия"
+
+#: lib/estate_web/controllers/page_html/home.html.heex:302
+#, elixir-autogen, elixir-format
+msgid "Here you can find the area that matches your requirements the best!"
+msgstr "Тук можеш да намериш района, който те устройва най-много!"
+
+#: lib/estate_web/controllers/page_html/home.html.heex:312
+#, elixir-autogen, elixir-format
+msgid "Here you have the freedom to add property types! Be creative!"
+msgstr "Тук имаш свободата да добавяш имот! Бъди креативен!"
+
+#: lib/estate_web/controllers/page_html/home.html.heex:363
+#, elixir-autogen, elixir-format
+msgid "Info"
+msgstr "Инфо"
+
+#: lib/estate_web/controllers/page_html/home.html.heex:364
+#: lib/estate_web/controllers/page_html/home.html.heex:374
+#: lib/estate_web/controllers/page_html/home.html.heex:384
+#, elixir-autogen, elixir-format
+msgid "Information"
+msgstr "Информация"
+
+#: lib/estate_web/controllers/rent_html/index.hetml.heex:187
+#, elixir-autogen, elixir-format
+msgid "Jessica Williams"
+msgstr "Джесика Уилиамс"
+
+#: lib/estate_web/controllers/rent_html/index.hetml.heex:136
+#, elixir-autogen, elixir-format
+msgid "John Smith"
+msgstr "Джон Смит"
+
+#: lib/estate_web/components/layouts/root.html.heex:65
+#, elixir-autogen, elixir-format
+msgid "Log Out"
+msgstr "Излез от профил"
+
+#: lib/estate_web/controllers/rent_html/index.hetml.heex:232
+#, elixir-autogen, elixir-format
+msgid "Michael Jordan"
+msgstr "Майкъл Джордан"
+
+#: lib/estate_web/controllers/rent_html/index.hetml.heex:68
+#: lib/estate_web/controllers/rent_html/index.hetml.heex:113
+#: lib/estate_web/controllers/rent_html/index.hetml.heex:164
+#: lib/estate_web/controllers/rent_html/index.hetml.heex:209
+#, elixir-autogen, elixir-format
+msgid "Monthly"
+msgstr "Месечно"
+
+#: lib/estate_web/controllers/rent_html/index.hetml.heex:165
+#, elixir-autogen, elixir-format
+msgid "North Milwaukee Avenue"
+msgstr "Норт Милкуей авеню"
+
+#: lib/estate_web/controllers/rent_html/index.hetml.heex:86
+#: lib/estate_web/controllers/rent_html/index.hetml.heex:131
+#: lib/estate_web/controllers/rent_html/index.hetml.heex:182
+#: lib/estate_web/controllers/rent_html/index.hetml.heex:227
+#, elixir-autogen, elixir-format
+msgid "Realtor"
+msgstr "Брокер"
+
+#: lib/estate_web/controllers/page_html/home.html.heex:279
+#, elixir-autogen, elixir-format
+msgid "Rent"
+msgstr "Наем"
+
+#: lib/estate_web/controllers/page_html/home.html.heex:353
+#, elixir-autogen, elixir-format
+msgid "See&Add your favourite proreties"
+msgstr "Виж и добави имоти"
+
+#: lib/estate_web/controllers/page_html/home.html.heex:373
+#, elixir-autogen, elixir-format
+msgid "Space"
+msgstr "Спейс"
+
+#: lib/estate_web/controllers/questions_html/index.html.heex:43
+#, elixir-autogen, elixir-format
+msgid "The home buying process typically involves finding a suitable property, securing financing through a mortgage lender, making an offer on the home, getting a home inspection to assess its condition, and then closing the deal. It's important to work with a real estate agent to guide you through each step."
+msgstr "Процесът на закупуване на жилище обикновено включва намиране на подходящ имот, осигуряване на финансиране чрез ипотечен кредитор, отправяне на оферта за дома, получаване на инспекция на дома, за да се оцени състоянието му, и след това затваряне на сделката. Важно е да работите с агент по недвижими имоти, който да ви води през всяка стъпка."
+
+#: lib/estate_web/controllers/page_html/home.html.heex:383
+#, elixir-autogen, elixir-format
+msgid "Thoughts"
+msgstr "Мисли"
+
+#: lib/estate_web/controllers/rent_html/index.hetml.heex:91
+#, elixir-autogen, elixir-format
+msgid "Tiffany Heffner"
+msgstr "Тигани Хефер"
+
+#: lib/estate_web/controllers/rent_html/index.hetml.heex:210
+#, elixir-autogen, elixir-format
+msgid "West Randolph Street"
+msgstr "Уест Рондолф Стрийт"
+
+#: lib/estate_web/controllers/questions_html/index.html.heex:40
+#, elixir-autogen, elixir-format
+msgid "What are the steps in the home buying process? "
+msgstr "Какви са стъките при покупка на имот?"
+
+#: lib/estate_web/controllers/rent_html/index.hetml.heex:67
+#: lib/estate_web/controllers/rent_html/index.hetml.heex:112
+#: lib/estate_web/controllers/rent_html/index.hetml.heex:163
+#: lib/estate_web/controllers/rent_html/index.hetml.heex:208
+#, elixir-autogen, elixir-format
+msgid "y old"
+msgstr "годишна"
+
+#: lib/estate_web/live/cities_live.ex:75
+#, elixir-autogen, elixir-format
+msgid "City"
+msgstr "Град"
+
+#: lib/estate_web/live/cities_live.ex:37
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Find a City in California"
+msgstr "Намери град"
+
+#: lib/estate_web/live/cities_live.ex:77
+#, elixir-autogen, elixir-format
+msgid "Has Airport"
+msgstr "Има Летище"
+
+#: lib/estate_web/live/cities_live.ex:78
+#, elixir-autogen, elixir-format
+msgid "Has Cultural Events"
+msgstr "Има Културни събития"
+
+#: lib/estate_web/live/cities_live.ex:58
+#, elixir-autogen, elixir-format
+msgid "Loading..."
+msgstr "Зареждане..."
+
+#: lib/estate_web/live/cities_live.ex:76
+#, elixir-autogen, elixir-format
+msgid "Population"
+msgstr "Население"
